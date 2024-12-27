@@ -4,14 +4,7 @@ Welcome to my personal React.js portfolio website! This project highlights my sk
 📂 Project Structure
 
     App.jsx: The main entry point that renders all key sections such as Home, Navbar, About, Skills, Services, Projects, Contact, and Footer​
-
-.
-About.jsx: Introduces me as a front-end developer, emphasizing my experience with React.js and passion for creating user-friendly web applications​
-.
-Projects.jsx: Displays a collection of projects with links to their GitHub repositories and Live Demos​
-
-    .
-
+    
 🛠️ Key Sections
 🏠 Home
 
