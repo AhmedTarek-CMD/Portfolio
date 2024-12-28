@@ -11,7 +11,7 @@ const ContactData = [
     icon: <MdOutlineEmail />,
     title: "Email",
     info: "ahmedtarekofficial799@gmail.com",
-    link: "mailto:test@gmail.com",
+    link: "mailto:ahmedtarekofficial799@gmail.com",
   },
   {
     id: 2,
