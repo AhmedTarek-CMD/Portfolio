@@ -22,7 +22,7 @@ const portfolioData = [
     demo: "https://jade-youtiao-3c2a0e.netlify.app/",
   },
   {
-    id: 6,
+    id: 3,
     image: IMG4,
     title: "Project 3",
     github: "https://github.com/AhmedTarek-CMD/Dashboard",
@@ -30,17 +30,17 @@ const portfolioData = [
   },
   {
     id: 4,
-    image: IMG5,
+    image: IMG3,
     title: "Project 4",
-    github: "https://github.com/AhmedTarek-CMD/XFactory",
-    demo: "https://ahmedtarek-cmd.github.io/XFactory/",
+    github: "https://github.com/AhmedTarek-CMD/GYM-Exercises",
+    demo: "https://gym-exercises-hazel-theta.vercel.app/",
   },
   {
     id: 5,
-    image: IMG3,
+    image: IMG5,
     title: "Project 5",
-    github: "https://github.com/AhmedTarek-CMD/Spering",
-    demo: "https://ahmedtarek-cmd.github.io/Spering/",
+    github: "https://github.com/AhmedTarek-CMD/XFactory",
+    demo: "https://ahmedtarek-cmd.github.io/XFactory/",
   },
   {
     id: 6,
