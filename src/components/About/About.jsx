@@ -14,7 +14,7 @@ const About = () => {
       <div className="container about-container">
         <div className="about-me">
           <div className="about-me-image">
-            <img src={AboutME} alt="About Image" />
+            <img src={AboutME} alt="Ahmed Tarek" />
           </div>
         </div>
         <div className="about-content">
@@ -36,14 +36,16 @@ const About = () => {
             </div>
           </div>
           <p>
-            Front-end developer using React JS with a strong understanding of
-            design principles and user experience, Seeking a junior front-end
-            developer role to leverage skills in creating engaging and
-            user-friendly web Applications, Adept at collaborating with
-            cross-functional teams to deliver high-quality projects on time.
+            Full-Stack Developer specializing in Next.js and ASP.NET Core, with
+            a Bachelor&apos;s degree in Computer Science and hands-on experience
+            developing responsive, scalable web applications. Proficient in
+            React.js, TypeScript, JavaScript, RESTful APIs, Entity Framework
+            Core, SQL Server, JWT Authentication, and Clean Architecture. Strong
+            foundation in OOP, SOLID principles, Dependency Injection, and CQRS,
+            with a focus on building maintainable and user-focused applications.
           </p>
           <a href="#contact" className="btn btn-primary">
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </div>
       </div>

@@ -17,19 +17,22 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
 }
 body {
+  min-width: 280px;
   font-family: "poppins", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
   background-image: url(assets/bg-texture.png);
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   display: none;
 }
 .container {
-  width: 80%;
+  width: min(1120px, 88%);
   margin: 0 auto;
 }
 h1,
@@ -41,10 +44,11 @@ h6 {
   font-weight: 500;
 }
 h1 {
-  font-size: 3rem;
+  font-size: clamp(2.25rem, 6vw, 3rem);
 }
 section {
-  padding-top: 8rem;
+  padding-top: clamp(5rem, 10vw, 8rem);
+  scroll-margin-top: 1rem;
 }
 .text-light {
   color: var(--color-light);
@@ -64,6 +68,7 @@ a:hover {
   cursor: pointer;
   border: 1px solid var(--color-primary);
   transition: 0.3s;
+  text-align: center;
 }
 .btn:hover {
   border-color: transparent;
@@ -82,30 +87,56 @@ img {
 .top-section h5 {
   text-align: center;
   color: var(--color-light);
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 .top-section h2 {
   text-align: center;
   color: var(--color-primary);
   margin-bottom: 3rem;
-  font-size: 30px;
+  font-size: clamp(1.6rem, 4vw, 1.875rem);
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.65s ease var(--reveal-delay, 0ms),
+    transform 0.65s ease var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
 }
 @media (max-width: 1024px) {
   .container {
-    width: 85%;
-  }
-  section {
-    padding-top: 6rem;
+    width: min(100% - 3rem, 900px);
   }
 }
 @media (max-width: 600px) {
   .container {
-    width: 90%;
-  }
-  section {
-    padding-top: 5rem;
+    width: min(100% - 2rem, 540px);
   }
   .top-section h2 {
     margin-bottom: 2rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }

@@ -7,9 +7,10 @@ const Home = () => {
   return (
     <div className="home">
       <div className="container home-container">
-        <h4>Hello I'm</h4>
+        <h4>Hello I&apos;m</h4>
         <h1>Ahmed Tarek</h1>
         <TypeAnimation
+          className="home-role"
           sequence={[
             1000,
             "Frontend Developer",
@@ -19,7 +20,7 @@ const Home = () => {
           ]}
           wrapper="span"
           speed={40}
-          style={{ color: "rgba(255, 255, 255, 0.6)", fontSize: "2rem" }}
+          style={{ color: "rgba(255, 255, 255, 0.6)" }}
           repeat={Infinity}
         />
         <div className="btns">
@@ -27,7 +28,7 @@ const Home = () => {
             Download CV
           </a>
           <a href="#contact" className="btn btn-primary">
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </div>
         <a href="#about" className="scroll">

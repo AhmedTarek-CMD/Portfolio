@@ -7,55 +7,87 @@ import Html from "../../assets/html.svg";
 import MaterialUi from "../../assets/materialui.svg";
 import Bootstrap from "../../assets/bootstrap.svg";
 import Next from "../../assets/next.svg";
+import { SiDotnet } from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { FaDatabase } from "react-icons/fa";
+import { DiMsqlServer } from "react-icons/di";
 
 const SkillsData = [
   {
     id: 1,
     image: Html,
     title: "HTML",
-    disc: "Structure",
+    description: "Markup Language",
   },
   {
     id: 2,
     image: Css,
     title: "CSS",
-    disc: "User Interface",
+    description: "Styling Language",
   },
   {
     id: 3,
     image: Javascript,
     title: "JavaScript",
-    disc: "Interaction",
+    description: "Programming Language",
   },
   {
     id: 4,
     image: Tailwind,
     title: "Tailwind",
-    disc: "User Interface",
+    description: "CSS Framework",
   },
   {
     id: 5,
     image: Bootstrap,
     title: "Bootstrap",
-    disc: "User Interface",
+    description: "CSS Framework",
   },
   {
     id: 6,
     image: MaterialUi,
     title: "Material UI",
-    disc: "User Interface",
+    description: "Component Library",
   },
   {
     id: 7,
     image: ReactJS,
     title: "React",
-    disc: "Framework",
+    description: "JavaScript Library",
   },
   {
     id: 8,
     image: Next,
-    title: "Next",
-    disc: "Framework",
+    title: "Next.js",
+    description: "React Framework",
+  },
+  {
+    id: 9,
+    icon: TbBrandCSharp,
+    color: "#9b4f96",
+    title: "C#",
+    description: "Programming Language",
+  },
+  {
+    id: 10,
+    icon: SiDotnet,
+    color: "#512bd4",
+    title: "ASP.NET Core",
+    description: "Backend Framework",
+  },
+  {
+    id: 11,
+    icon: FaDatabase,
+    color: "#7b4bb7",
+    title: "Entity Framework Core",
+    description: "ORM",
+  },
+  {
+    id: 12,
+    icon: DiMsqlServer,
+    color: "#cc2927",
+    title: "SQL Server",
+    description: "Relational Database",
   },
 ];
 
@@ -67,19 +99,29 @@ const Skills = () => {
         <h2>MY EXPERIENCE</h2>
       </div>
       <div className="container container-skills">
-        {SkillsData.map(({ id, image, title, disc }) => (
+        {SkillsData.map(
+          ({ id, image, icon: Icon, color, title, description }) => (
           <article key={id}>
             <div className="card-skill">
               <div className="icon">
-                <img src={image} alt="Image" />
+                {Icon ? (
+                  <Icon
+                    className="technology-icon"
+                    style={{ color }}
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <img src={image} alt={`${title} logo`} />
+                )}
               </div>
               <div className="content">
                 <h4>{title}</h4>
-                <p className="text-light">{disc}</p>
+                <p className="text-light">{description}</p>
               </div>
             </div>
           </article>
-        ))}
+          )
+        )}
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 footer {
   background-color: var(--color-primary);
-  padding: 40px 0;
+  padding: 40px 1rem max(8rem, calc(5rem + env(safe-area-inset-bottom)));
   margin-top: 100px;
   text-align: center;
   font-size: 14px;
@@ -43,6 +43,7 @@ footer a {
   background: transparent;
   color: var(--color-bg);
   border-color: var(--color-bg);
+  transform: translateY(-4px);
 }
 .copy {
   font-size: 17px;
@@ -55,5 +56,8 @@ footer a {
   .links {
     flex-direction: column;
     gap: 15px;
+  }
+  .copy {
+    font-size: 0.9rem;
   }
 }

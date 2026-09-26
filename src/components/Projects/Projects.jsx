@@ -9,45 +9,45 @@ import IMG6 from "../../assets/project6.png";
 const portfolioData = [
   {
     id: 1,
-    image: IMG1,
-    title: "Project 1",
-    github: "https://github.com/AhmedTarek-CMD/Clothes-Ecommerce-Website",
-    demo: "https://startling-gelato-d13ef8.netlify.app/",
+    image: IMG6,
+    title: "LA DIANA",
+    github: "https://github.com/AhmedTarek-CMD/LA",
+    demo: "https://la-azure-omega.vercel.app/",
   },
   {
     id: 2,
-    image: IMG2,
-    title: "Project 2",
-    github: "https://github.com/AhmedTarek-CMD/Food-Ecommerce",
-    demo: "https://jade-youtiao-3c2a0e.netlify.app/",
+    image: IMG5,
+    title: "Drift & Bloom",
+    github: "https://github.com/AhmedTarek-CMD/DriftBloom",
+    demo: "https://driftnblooms.com/",
   },
   {
     id: 3,
-    image: IMG4,
-    title: "Project 3",
-    github: "https://github.com/AhmedTarek-CMD/Dashboard",
-    demo: "https://dashboard-dusky-five-24.vercel.app/",
+    image: IMG2,
+    title: "Edemy",
+    github: "https://github.com/AhmedTarek-CMD/Edemy",
+    demo: "https://edemy-red-one.vercel.app/",
   },
   {
     id: 4,
+    image: IMG1,
+    title: "Forever",
+    github: "https://github.com/AhmedTarek-CMD/Clothes-Ecommerce-Website",
+    demo: "https://clothes-ecommerce-website.vercel.app/",
+  },
+  {
+    id: 5,
     image: IMG3,
-    title: "Project 4",
+    title: "GYM Exercises",
     github: "https://github.com/AhmedTarek-CMD/GYM-Exercises",
     demo: "https://gym-exercises-hazel-theta.vercel.app/",
   },
   {
-    id: 5,
-    image: IMG5,
-    title: "Project 5",
-    github: "https://github.com/AhmedTarek-CMD/XFactory",
-    demo: "https://ahmedtarek-cmd.github.io/XFactory/",
-  },
-  {
     id: 6,
-    image: IMG6,
-    title: "Project 6",
-    github: "https://github.com/AhmedTarek-CMD/Project",
-    demo: "https://ahmedtarek-cmd.github.io/Project/",
+    image: IMG4,
+    title: "Dashboard",
+    github: "https://github.com/AhmedTarek-CMD/Dashboard",
+    demo: "https://dashboard-dusky-five-24.vercel.app/",
   },
 ];
 
@@ -62,7 +62,7 @@ const Projects = () => {
         {portfolioData.map(({ id, image, title, github, demo }) => (
           <article key={id} className="project-item">
             <div className="project-item-image">
-              <img src={image} alt="Image" />
+              <img src={image} alt={`${title} project preview`} />
               <h3>{title}</h3>
               <div className="project-item-btns">
                 <a href={github} target="_blank" className="btn">

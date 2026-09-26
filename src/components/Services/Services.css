@@ -1,12 +1,10 @@
 .container-services {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
 }
 .container-services .card {
-  width: 31%;
-  padding: 50px 40px;
+  padding: clamp(2rem, 4vw, 3.125rem) clamp(1.5rem, 3vw, 2.5rem);
   background-color: var(--color-bg-variant);
   border-radius: 1rem;
   border: 1px solid transparent;
@@ -15,6 +13,7 @@
 .container-services .card:hover {
   border-color: var(--color-primary);
   background: transparent;
+  transform: translateY(-7px);
 }
 .container-services .card .icon {
   font-size: 70px;
@@ -29,12 +28,17 @@
   color: var(--color-light);
 }
 @media (max-width: 1024px) {
+  .container-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .container-services .card {
-    width: 48%;
-    margin-bottom: 40px;
+    width: 100%;
   }
 }
 @media (max-width: 600px) {
+  .container-services {
+    grid-template-columns: 1fr;
+  }
   .container-services .card {
     width: 100%;
   }

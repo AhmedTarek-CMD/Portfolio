@@ -1,23 +1,39 @@
 .home {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
 }
 .home-container {
   position: relative;
-  height: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
+  padding-block: 4rem 7rem;
 }
 .home-container h4 {
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  animation: hero-entry 0.6s ease both;
+}
+.home-container h1 {
+  animation: hero-entry 0.6s 0.1s ease both;
+}
+.home-role {
+  display: inline-block;
+  min-height: 3.4rem;
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  animation: hero-entry 0.6s 0.2s ease both;
 }
 .btns {
   display: flex;
   gap: 1.2rem;
   justify-content: center;
   margin-top: 2.5rem;
+  flex-wrap: wrap;
+  animation: hero-entry 0.6s 0.3s ease both;
 }
 .home-socials {
   font-size: 20px;
@@ -27,6 +43,8 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 35px;
+  gap: 0.4rem;
+  animation: hero-entry 0.6s 0.45s ease both;
 }
 .scroll {
   font-size: 15px;
@@ -34,17 +52,54 @@
   bottom: 85px;
   right: 0;
   rotate: 90deg;
+  animation: gentle-float 2.4s ease-in-out infinite;
+}
+@keyframes hero-entry {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes gentle-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 6px 0;
+  }
 }
 @media (max-width: 600px) {
+  .home-container {
+    padding-bottom: 6rem;
+  }
+  .home-role {
+    min-height: 2.8rem;
+  }
+  .btns {
+    margin-top: 1.75rem;
+  }
   .home-socials {
     display: flex;
     gap: 20px;
     flex-direction: row;
     position: static;
     margin-top: 20px;
-    font-size: 40px;
+    font-size: 1.8rem;
   }
   .scroll {
     display: none;
+  }
+}
+@media (max-width: 360px) {
+  .btns {
+    width: 100%;
+  }
+  .btns .btn {
+    width: 100%;
   }
 }
