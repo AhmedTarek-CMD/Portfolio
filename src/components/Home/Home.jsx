@@ -13,9 +13,9 @@ const Home = () => {
           className="home-role"
           sequence={[
             1000,
-            "Frontend Developer",
+            "Full Stack Developer",
             1000,
-            "React Specialist",
+            "React & .NET Specialist",
             1000,
           ]}
           wrapper="span"
